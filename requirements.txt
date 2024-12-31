@@ -1,6 +1,6 @@
 streamlit
-plotly == 5.7.0
-pandas == 1.4.1
+plotly
+pandas
 html5lib == 1.1
 matplotlib
 numpy
