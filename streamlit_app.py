@@ -34,10 +34,30 @@ monitor_list = ('europa', 'italia', 'sovranazionali', 'banche', 'bancheitalia', 
 
 yaxis= f'Interessi {"netti" if interessi == "N" else "lordi"} [%]'
 
-monitor = st.selectbox(
-    "scegli tipo di Bond",
+c1, c2, c3  = st.columns(3)
+
+with c1:
+    monitor = st.selectbox(
+    "Scegli tipo di Bond",
     monitor_list,
 )
+
+with c2:
+    intr = st.selectbox(
+        "Scegli tipo di interessi",
+        ('Lordo', 'Netto')
+    )
+
+    interessi = 'G' if intr == 'Lordo' else 'N'
+
+with c3:
+    yvar = st.selectbox(
+        "Scegli asse Y",
+        ('Interessi', 'Cedola')
+    )
+
+    yvar = yvar.lower()
+
 
 url = f'https://www.simpletoolsforinvestors.eu/monitor_info.php?monitor={monitor}&timescale=DUR&yieldtype={interessi}&currency={valuta}&volumerating={volume}'
 
