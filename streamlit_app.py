@@ -242,5 +242,6 @@ st.plotly_chart(fig)
 
 
 st.text(f'Numero titoli = {len(pdf)}')
+pdf.loc[:, f'interessi {interessi}'] = pdf.interessi
 st.table(pdf[['Codice ISIN', 'Descrizione', 'Divisa', 'Datascadenza', 'Lottominimo', 'Status', 'Mercato', 'TipoCalcolo', 'prezzo',f'interessi {interessi}','durata','cedola', 'volume']].sort_values(by='durata', ascending=True))
 # st.table(pdf)
