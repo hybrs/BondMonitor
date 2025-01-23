@@ -228,8 +228,8 @@ fig = go.Figure(data=go.Scatter(
 fig.update_layout(
     # title=monitor.capitalize(),
     xaxis_title='Durata [anni]',
-    # yaxis_title=yaxis,
-    yaxis_title=yvar.capitalize() + ' [%]',
+    yaxis_title=yaxis,
+    # yaxis_title=yvar.capitalize() + ' [%]',
     xaxis=dict(title_font=dict(size=fs + 4), tickfont=dict(size=fs)),
     yaxis=dict(title_font=dict(size=fs + 4), tickfont=dict(size=fs)),
     width=13600,
