@@ -32,7 +32,6 @@ volume=0
 
 monitor_list = ('europa', 'italia', 'sovranazionali', 'banche', 'bancheitalia', 'corporate', 'corporateitalia')
 
-yaxis= f'Interessi {"netti" if interessi == "N" else "lordi"} [%]'
 
 c1, c2, c3  = st.columns(3)
 
@@ -57,6 +56,9 @@ with c3:
     )
 
     yvar = yvar.lower()
+
+
+yaxis= f'Interessi {"netti" if interessi == "N" else "lordi"} [%]'
 
 
 url = f'https://www.simpletoolsforinvestors.eu/monitor_info.php?monitor={monitor}&timescale=DUR&yieldtype={interessi}&currency={valuta}&volumerating={volume}'
