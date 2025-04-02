@@ -179,7 +179,7 @@ pdf = monitorDF[mask].copy()
 
 # print(len(pdf))
 
-st.dataframe(monitorDF.volume.describe())
+# st.dataframe(monitorDF.volume.describe())
 
 # Generate sample data
 # np.random.seed(42)
@@ -191,6 +191,7 @@ clr = pdf[cvar]
 # marker_sizes = (pdf.cedola+2) * 4
 marker_sizes = (pdf.interessi+1) * 4
 # marker_sizes = (pdf.volume+1) / (pdf.volume.max()+1) * 100
+marker_sizes = (pdf.volume+1) / (pdf.volume.max()+1) * 100
 
 
 customdata = [[dataScad, cedola, ISINcode, descr, prezzo, volume, interessi] for dataScad, cedola, ISINcode, descr, prezzo, volume, interessi in zip(pdf.Datascadenza, pdf.cedola, pdf['Codice ISIN'], pdf.Descrizione, pdf.prezzo, pdf.volume, pdf.interessi)]
