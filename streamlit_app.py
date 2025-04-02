@@ -210,8 +210,8 @@ fig = go.Figure(data=go.Scatter(
         color=clr,
         # colorscale='viridis',
         # colorscale='plasma_r',
-        # colorscale='Reds',
-        colorscale='Blues',
+        colorscale='Reds',
+        # colorscale='Blues',
         showscale=True,
         colorbar=dict(
             title=cvar.capitalize(),
