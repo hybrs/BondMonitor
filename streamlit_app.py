@@ -179,7 +179,7 @@ pdf = monitorDF[mask].copy()
 
 # print(len(pdf))
 
-print(monitorDF.volume.describe())
+st.dataframe(monitorDF.volume.describe())
 
 # Generate sample data
 # np.random.seed(42)
