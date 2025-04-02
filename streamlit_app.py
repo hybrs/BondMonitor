@@ -187,7 +187,8 @@ clr = pdf[cvar]
 # clr = pdf.prezzo
 
 # marker_sizes = (pdf.cedola+2) * 4
-marker_sizes = (pdf.interessi+1) * 4
+# marker_sizes = (pdf.interessi+1) * 4
+marker_sizes = (pdf.volume+1) * 4
 
 
 customdata = [[dataScad, cedola, ISINcode, descr, prezzo, volume, interessi] for dataScad, cedola, ISINcode, descr, prezzo, volume, interessi in zip(pdf.Datascadenza, pdf.cedola, pdf['Codice ISIN'], pdf.Descrizione, pdf.prezzo, pdf.volume, pdf.interessi)]
