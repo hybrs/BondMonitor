@@ -150,7 +150,7 @@ with c2:
 
     przM = st.slider(
         'Scegli massimo per prezzo [euro]',
-        0.00, float(monitorDF['prezzo'].max()), 99.00)
+        0.00, float(monitorDF['prezzo'].max()), 101.00)
     # przm, przM = przvalues
 
 
