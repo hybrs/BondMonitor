@@ -234,7 +234,7 @@ fig.update_layout(
     xaxis=dict(title_font=dict(size=fs + 4), tickfont=dict(size=fs)),
     yaxis=dict(title_font=dict(size=fs + 4), tickfont=dict(size=fs)),
     width=13600,
-    height=400
+    height=600
 )
 
 
