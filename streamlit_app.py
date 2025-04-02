@@ -58,6 +58,7 @@ with c3:
     yvar = yvar.lower()
 
 
+
 yaxis= f'Interessi {"netti" if interessi == "N" else "lordi"} [%]'
 
 
@@ -233,7 +234,7 @@ fig.update_layout(
     xaxis=dict(title_font=dict(size=fs + 4), tickfont=dict(size=fs)),
     yaxis=dict(title_font=dict(size=fs + 4), tickfont=dict(size=fs)),
     width=13600,
-    height=800
+    height=400
 )
 
 
