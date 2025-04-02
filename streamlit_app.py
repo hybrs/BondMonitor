@@ -179,6 +179,8 @@ pdf = monitorDF[mask].copy()
 
 # print(len(pdf))
 
+print(monitorDF.volume.describe())
+
 # Generate sample data
 # np.random.seed(42)
 x = pdf[xvar] # np.random.rand(100)
