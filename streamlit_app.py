@@ -90,7 +90,8 @@ if len(st.session_state.data[interessi][monitor]) == 0:
         # print(monitorDF.columns)
         monitorDF.loc[:, 'prezzo'] = monitorDF['Prezzo diriferimento'] / 1e2
         monitorDF.loc[:, 'interessi'] = monitorDF['Yield'] / 1e2
-        monitorDF.loc[:, 'durata'] = monitorDF['Duration'] / 1e2
+        # monitorDF.loc[:, 'durata'] = monitorDF['Duration'] / 1e2 # column not present anymore
+        monitorDF.loc[:, 'durata'] = monitorDF['DurationModificata'] / 1e2
         monitorDF.loc[:, 'cedola'] = monitorDF.Descrizione.apply(get_cedola)
         monitorDF.loc[:, 'cedola'] = monitorDF.cedola.apply(parse_cedola)
         monitorDF.loc[:, 'volume'] = monitorDF['Volume(Milioni)']/1e3
