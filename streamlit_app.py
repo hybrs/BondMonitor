@@ -227,7 +227,7 @@ fig = go.Figure(data=go.Scatter(
     hovertemplate=(
         '%{customdata[3]}<br>-----<br>' +
         'Durata: %{x:.2f} (%{customdata[0]}) <br>' +
-        'Interessi '+'intr_str'+': %{customdata[6]:.2f}<br>' +
+        'Interessi '+intr_str+': %{customdata[6]:.2f}<br>' +
         'Cedola: %{customdata[1]}<br>' +
         'Prezzo:%{customdata[4]}<br>' +
         'Volume: %{customdata[5]}<br>'+
