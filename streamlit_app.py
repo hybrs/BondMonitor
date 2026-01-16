@@ -147,7 +147,7 @@ with c1:
 with c2:
     volm = st.slider(
         'Scegli minimo per volume [milioni]',
-        0.00, float(monitorDF['volume'].max()), 0.00)
+        0.00, float(monitorDF['volume'].max()), 1.00)
     
 
     przM = st.slider(
