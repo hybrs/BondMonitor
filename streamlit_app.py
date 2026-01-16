@@ -226,8 +226,8 @@ fig = go.Figure(data=go.Scatter(
     ),
     hovertemplate=(
         'Durata: %{x:.2f} (%{customdata[0]}) <br>' +
-        'Cedola:%{customdata[1]}<br>' +
-        f'Interessi {"netti" if interessi == "N" else "lordi"}: %{customdata[6]:.2f}<br>' +
+        'Interessi: %{customdata[6]:.2f}<br>' +
+        'Cedola: %{customdata[1]}<br>' +
         'ISIN: %{customdata[2]}<br>' +
         '%{customdata[3]}<br>-----<br>' +
         'Prezzo:%{customdata[4]}<br>' +
