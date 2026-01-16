@@ -27,7 +27,7 @@ monitor='banche'
 # monitor='corporate'
 monitor='corporateitalia'
 interessi='G' # lordo
-# interessi='N' # netto
+interessi='N' # netto
 volume=0
 
 monitor_list = ('europa', 'italia', 'sovranazionali', 'banche', 'bancheitalia', 'corporate', 'corporateitalia')
@@ -44,7 +44,8 @@ with c1:
 with c2:
     intr = st.selectbox(
         "Scegli tipo di interessi",
-        ('Lordo', 'Netto')
+        ('Lordo', 'Netto'),
+        index=1
     )
 
     interessi = 'G' if intr == 'Lordo' else 'N'
@@ -151,8 +152,8 @@ with c2:
 
     przM = st.slider(
         'Scegli massimo per prezzo [euro]',
-        0.00, float(monitorDF['prezzo'].max()), 101.00)
-    # przm, przM = przvalues
+        0.00, float(monitorDF['prezzo'].max()), 100.00)
+    # przm, przM = przvaluess
 
 
 
