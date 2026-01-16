@@ -61,7 +61,7 @@ with c3:
 
 
 
-yaxis= f'Interessi {"netti" if interessi == "N" else "lordi"} [%]'
+yaxis= f'Interessi {"netti" if interessi == "N" else "lordi"} [%]' if 'interessi' == yvar else 'Cedola [%]'
 
 
 url = f'https://www.simpletoolsforinvestors.eu/monitor_info.php?monitor={monitor}&timescale=DUR&yieldtype={interessi}&currency={valuta}&volumerating={volume}'
