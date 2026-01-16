@@ -225,13 +225,13 @@ fig = go.Figure(data=go.Scatter(
         )
     ),
     hovertemplate=(
+        '%{customdata[3]}<br>-----<br>' +
         'Durata: %{x:.2f} (%{customdata[0]}) <br>' +
         'Interessi: %{customdata[6]:.2f}<br>' +
         'Cedola: %{customdata[1]}<br>' +
-        'ISIN: %{customdata[2]}<br>' +
-        '%{customdata[3]}<br>-----<br>' +
         'Prezzo:%{customdata[4]}<br>' +
-        'Volume: %{customdata[5]}' + '<extra></extra>'
+        'Volume: %{customdata[5]}' +
+        'ISIN: %{customdata[2]}<br>'
     ),
     customdata=customdata,
 ))
