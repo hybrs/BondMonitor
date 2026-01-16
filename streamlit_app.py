@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
 # import numpy as np
+import datetime
 import streamlit as st
 
 
@@ -92,7 +93,8 @@ if len(st.session_state.data[interessi][monitor]) == 0:
         monitorDF.loc[:, 'prezzo'] = monitorDF['Prezzo diriferimento'] / 1e2
         monitorDF.loc[:, 'interessi'] = monitorDF['Yield'] / 1e2
         # monitorDF.loc[:, 'durata'] = monitorDF['Duration'] / 1e2 # column not present anymore
-        monitorDF.loc[:, 'durata'] = monitorDF['DurationModificata'] / 1e2
+        # monitorDF.loc[:, 'durata'] = monitorDF['DurationModificata'] / 1e2
+        monitorDF.loc[:, 'durata'] = [dd.days/365 for dd in (pd.to_datetime(monitorDF.Datascadenza) - datetime.datetime.now())]
         monitorDF.loc[:, 'cedola'] = monitorDF.Descrizione.apply(get_cedola)
         monitorDF.loc[:, 'cedola'] = monitorDF.cedola.apply(parse_cedola)
         monitorDF.loc[:, 'volume'] = monitorDF['Volume(Milioni)']/1e3
@@ -104,6 +106,7 @@ else:
     print(f'Data already downlaoded for monitor = {monitor.capitalize()} e interessi {interessi}')
     st.info(f'Dati gia scaricati per monitor = {monitor.capitalize()} e interessi {interessi}', icon="ℹ️")
     monitorDF = st.session_state.data[interessi][monitor].copy()
+
 
 # mask = (monitorDF['volume'] >= 0 ) & (monitorDF['prezzo'] < 99 ) & (monitorDF['durata'] < 11) & (monitorDF['interessi'] >= 2) # & (monitorDF['interessi'] <= 5)
 # mask = (monitorDF['volume'] >= 0 ) & (monitorDF['prezzo'] < 99 ) & (monitorDF['durata'] < 11) # & ((monitorDF['interessi'] >= 2) | (monitorDF['cedola'] > 0.5)) # & (monitorDF['interessi'] <= 5)
