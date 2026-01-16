@@ -230,8 +230,8 @@ fig = go.Figure(data=go.Scatter(
         'Interessi: %{customdata[6]:.2f}<br>' +
         'Cedola: %{customdata[1]}<br>' +
         'Prezzo:%{customdata[4]}<br>' +
-        'Volume: %{customdata[5]}' +
-        'ISIN: %{customdata[2]}<br>'
+        'Volume: %{customdata[5]}<br>'+
+        'ISIN: %{customdata[2]}'
     ),
     customdata=customdata,
 ))
