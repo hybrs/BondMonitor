@@ -60,8 +60,8 @@ with c3:
     yvar = yvar.lower()
 
 
-
-yaxis= f'Interessi {"netti" if interessi == "N" else "lordi"} [%]' if 'interessi' == yvar else 'Cedola [%]'
+intr_str = "netti" if interessi == "N" else "lordi"
+yaxis= f'Interessi {intr_str} [%]' if 'interessi' == yvar else 'Cedola [%]'
 
 
 url = f'https://www.simpletoolsforinvestors.eu/monitor_info.php?monitor={monitor}&timescale=DUR&yieldtype={interessi}&currency={valuta}&volumerating={volume}'
@@ -227,7 +227,7 @@ fig = go.Figure(data=go.Scatter(
     hovertemplate=(
         '%{customdata[3]}<br>-----<br>' +
         'Durata: %{x:.2f} (%{customdata[0]}) <br>' +
-        'Interessi: %{customdata[6]:.2f}<br>' +
+        'Interessi '+'intr_str'+': %{customdata[6]:.2f}<br>' +
         'Cedola: %{customdata[1]}<br>' +
         'Prezzo:%{customdata[4]}<br>' +
         'Volume: %{customdata[5]}<br>'+
