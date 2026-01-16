@@ -136,7 +136,7 @@ c1, c2 = st.columns(2)
 with c1:
     intm = st.slider(
         f'Scegli minimo per '+yaxis.lower(),
-        0.00, float(monitorDF[yvar].max()), 0.00)
+        0.00, float(monitorDF[yvar].max()), 1.50)
     # intm, intM = intvalues
 
     cedm = st.slider(
