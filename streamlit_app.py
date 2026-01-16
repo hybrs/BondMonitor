@@ -129,7 +129,7 @@ intm, cedm, volm, przM = 0, 0, 0, 0
 
 durvalues = st.slider(
     'Scegli range di valori per durata [anni]',
-    0.00, float(monitorDF[xvar].max()), (0.00, float(monitorDF[xvar].max())))
+    0.00, float(monitorDF[xvar].max()), (1.00, float(monitorDF[xvar].max())))
 durm, durM = durvalues
 
 c1, c2 = st.columns(2)
